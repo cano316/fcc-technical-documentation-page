@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning CSS</title>
+    <link rel="stylesheet" href="app.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <nav id="navbar">
+        <header>Learning CSS</header>
+        <ul>
+            <li><a class="nav-link" href="#what_is_css?">What is CSS?</a></li>
+            <li><a class="nav-link" href="#how_css_is_structured">How CSS is Structured</a></li>
+            <li><a class="nav-link" href="#the_box_model">The Box Model</a></li>
+            <li><a class="nav-link" href="#values_and_units">Values and Units</a></li>
+            <li><a class="nav-link" href="#positioning">Positioning</a></li>
+        </ul>
+
+    </nav>
+    <main id="main-doc">
+        <section class="main-section" id="what_is_css?">
+            <header>What is CSS?</header>
+            <p>CSS (Cascading Style Sheets) allows you to create great-looking web pages, but how does it work under the
+                hood? This article explains what CSS is, with a simple syntax example, and also covers some key terms
+                about the language.</p>
+        </section>
+        <section class="main-section" id="how_css_is_structured">
+            <header>How CSS Is Structured</header>
+            <p>First, let's examine three methods of applying CSS to a document:</p>
+            <ul>
+                <li>External Stylesheet</li>
+                <li>Internal Stylesheet</li>
+                <li>Inline Styles</li>
+            </ul>
+            <h2>External stylesheet</h2>
+            <p>An external stylesheet contains CSS in a separate file with a <code>.css</code> extension. This is the
+                most common and
+                useful method of bringing CSS to a document. You can link a single CSS file to multiple web pages,
+                styling all of them with the same CSS stylesheet. In the Getting started with CSS, we linked an external
+                stylesheet to our web page.
+                You reference an external CSS stylesheet from an HTML
+                <code>link</code> element.
+            </p>
+            <h2>Internal stylesheet</h2>
+            <p>An internal stylesheet resides within an HTML document. To create an internal stylesheet, you place CSS
+                inside a <code>style</code> element contained inside the HTML <code>head</code>.</p>
+
+            <p>In some circumstances, internal stylesheets can be useful. For example, perhaps you're working with a
+                content management system where you are blocked from modifying external CSS files.</p>
+            <p>But for sites with more than one page, an internal stylesheet becomes a less efficient way of working. To
+                apply uniform CSS styling to multiple pages using internal stylesheets, you must have an internal
+                stylesheet in every web page that will use the styling. The efficiency penalty carries over to site
+                maintenance too. With CSS in internal stylesheets, there is the risk that even one simple styling change
+                may require edits to multiple web pages.</p>
+            <h2>Inline styles</h2>
+            <p>Inline styles are CSS declarations that affect a single HTML element, contained within a
+                <code>style</code> attribute. The implementation of an inline style in an HTML document might look like
+                this:
+            </p>
+            <p>Avoid using CSS in this way, when possible. It is the opposite of a best practice. First, it is the least
+                efficient implementation of CSS for maintenance. One styling change might require multiple edits within
+                a single web page. Second, inline CSS also mixes (CSS) presentational code with HTML and content, making
+                everything more difficult to read and understand. Separating code and content makes maintenance easier
+                for all who work on the website.</p>
+
+        </section>
+        <section class="main-section" id="the_box_model">
+            <header>The Box Model</header>
+            <p>Everything in CSS has a box around it, and understanding these boxes is key to being able to create
+                layouts with CSS, or to align items with other items. In this lesson, we will take a proper look at the
+                CSS <em>Box Model</em> so that you can build more complex layout tasks with an understanding of how it
+                works and the terminology that relates to it.</p>
+            <h2>Block and inline boxes</h2>
+            <p>In CSS we broadly have two types of boxes — <strong>block boxes</strong> and <strong>inline
+                    boxes</strong>. These characteristics refer to
+                how the box behaves in terms of page flow and in relation to other boxes on the page. Boxes also have an
+                <strong>inner display type</strong> and an <strong>outer display type</strong>. First, we will explain
+                what we mean by block box and
+                inline box. We will then explain what is meant by an inner and outer display type.
+            </p>
+        </section>
+        <section class="main-section" id="values_and_units">
+            <header>Values and Units</header>
+            <p>In CSS specifications and on the property pages here on MDN you will be able to spot value types as they
+                will be surrounded by angle brackets, such as <code>color</code> or <code>length</code>. When you see
+                the value type <code>color</code> as valid for a particular property, that means you can use any valid
+                color as a value for that property, as listed on the <code>color</code> reference page.</p>
+        </section>
+        <section class="main-section" id="positioning">
+            <header>Positioning</header>
+            <p>Positioning allows us to produce interesting results by overriding normal document flow. What if you want
+                to slightly alter the position of some boxes from their default flow position to give a slightly quirky,
+                distressed feel? Positioning is your tool. Or what if you want to create a UI element that floats over
+                the top of other parts of the page and/or always sits in the same place inside the browser window no
+                matter how much the page is scrolled? Positioning makes such layout work possible.
+
+                There are a number of different types of positioning that you can put into effect on HTML elements. To
+                make a specific type of positioning active on an element, we use the <code>position</code> property.</p>
+            <p>Types of positioning</p>
+            <ul>
+                <li>Static</li>
+                <li>Relative</li>
+                <li>Absolute</li>
+                <li>Fixed</li>
+                <li>Sticky</li>
+            </ul>
+        </section>
+    </main>
+</body>
+
+</html>
